@@ -208,9 +208,9 @@ The home directory of bitbucket. Configuration files are stored here. Default: '
 Whether or not this module will manage the bitbucket user and group associated with the install. 
 You must either allow the module to manage both aspects or handle both outside the module. Default: true
 #####`user`
-The user that bitbucket should run as, as well as the ownership of bitbucket related files. Default: 'bitbucket'
+The user that bitbucket should run as, as well as the ownership of bitbucket related files. Default: 'atlbitbucket'
 #####`group`
-The group that bitbucket files should be owned by. Default: 'bitbucket'
+The group that bitbucket files should be owned by. Default: 'atlbitbucket'
 #####`uid`
 Specify a uid of the bitbucket user. Default: undef
 #####`gid`
@@ -272,6 +272,8 @@ Extra configuration options for bitbucket (bitbucket-config.properties). See htt
 Specify the umask bitbucket should run with. Defaults to undef, in which case the user account's default umask is left untouched.
 
 ####Backup parameters####
+#####`manage_backup`
+Whether to manage installation of backup client or not. Defaults to true.
 #####`backup_ensure`
 Enable or disable the backup cron job. Defaults to present.
 #####`backupclient_version`
@@ -337,3 +339,4 @@ BEAKER_set==centos-64-x64 bundle exec rake beaker
 * Bruce Morrison
 * Daniel Duwe
 * Brian Carpio
+* Frank Kleine
